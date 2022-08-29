@@ -4,22 +4,23 @@
 
 \newcommand{\myTitle}{Small \LaTeX{} Assignment Template\xspace}
 \newcommand{\mySubtitle}{Subtitle\xspace}
-\newcommand{\myDegree}{Degree\xspace}
-\newcommand{\myDegreeCourse}{Degree course\xspace}
-\newcommand{\myName}{First Name Last Name}
+\newcommand{\myDegree}{\xspace}
+\newcommand{\myDegreeCourse}{Digital Sciences\xspace}
+\newcommand{\myName}{First Name Last Name }
 \newcommand{\myProf}{Prof. Name\xspace}
+\newcommand{\myProfTwo}{Prof. Name\xspace}
 \newcommand{\myOtherProf}{Prof. Name\xspace}
 \newcommand{\mySupervisor}{Supervisor Name\xspace}
-\newcommand{\myFaculty}{Faculty\xspace}
+\newcommand{\myFaculty}{Fakultät für Informatik und Ingenieurwissenschaften\xspace}
 \newcommand{\myDepartment}{Department\xspace}
-\newcommand{\myUni}{University\xspace}
+\newcommand{\myUni}{Technischen Hochschule Köln\xspace}
 \newcommand{\myLocation}{Location, Country\xspace}
 \newcommand{\myTime}{\today\xspace}
 \newcommand{\myVersion}{version 1.0\xspace}
-\newcommand{\myModule}{Testmodule}
+\newcommand{\myModule}{Research proposal}
 \newcommand{\myTerm}{Winterterm 2021/2022}
 \newcommand{\myMail}{test@test.com \xspace}
-\newcommand{\myLogo}{assets/logo.png}
+\newcommand{\myLogo}{assets/logo.pdf}
 \newcommand{\myMatriculationNo}{1337 \xspace}
 
 
@@ -31,15 +32,17 @@
 	  
     % logo
     \vspace{-15mm}
-       \centering	 \includegraphics[height=50mm]{\myLogo}
+       	 \includegraphics[height=30mm]{\myLogo}
     \vspace{15mm}
     
     % title
     \begin{center}
-      \Large\myModule\\[2ex]
-      \huge \textbf{\myTitle}\\[2ex]
-      \large\myUni, \myDepartment\\[1ex]
-      \normalsize\myTerm\\
+      \LARGE\textsc\myModule\\[4ex]
+      \Huge \textbf{\myTitle}\\[2ex]
+      \hrule\par\rule{0pt}{4ex}
+      \large vorgelegt an der \myUni\\
+      \large im Studiengang \myDegreeCourse\\
+      \large der \myFaculty\\
       \normalsize\date
       \vfill
     \end{center}
@@ -50,9 +53,11 @@
       \begin{minipage}{0.49\textwidth}
         \large
         \begin{tabular}[t]{l|l}
-        & \textbf{By} \myName | \myMatriculationNo \\[2pt]
+        & \textbf{Von} \myName \\[2pt]
         & \textbf{Mail} \hrefblue{mailto:test@test.com}{test@test.com} \\[2pt]
-        & \textbf{Supervisor} \myProf\\[2pt]
+        & \textbf{Matrikelnr.} \myMatriculationNo \\[2pt]
+        & \textbf{Erstprüfer} \myProf\\[2pt]
+        & \textbf{Zweitprüfer} \myProfTwo\\[2pt]
         \end{tabular}
     \end{minipage}
     \end{center}
@@ -79,7 +84,7 @@
 
 % === FONT & LANGUAGE ===
 % \usepackage[ngerman]{babel} % set language
-\usepackage[main=english,ngerman]{babel} % set multi-language document
+\usepackage[main=ngerman,english]{babel} % set multi-language document
 
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc}
@@ -114,8 +119,9 @@
 \renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
 
 % === SECTIONS ===
-\renewcommand\thesection{\Roman{section}} % sections with roman numerals
-\renewcommand\thesubsection{\Roman{subsection}} % subsections with roman numerals
+%\renewcommand\thesection{\Roman{section}} % sections with roman numerals
+%\renewcommand\thesubsection{\Roman{subsection}} % subsections with roman numerals
+
 %\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % new style of section titles
 %\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % new style of section titles
 
@@ -124,9 +130,9 @@
 \pagestyle{fancy} % set for all pages
 \fancyhead{} % Blank out the default header
 \fancyfoot[C]{\thepage} % Number of page centered in footer
-\fancyhead[L]{ \nouppercase{\rightmark}  } % Custom header text
+\fancyhead[L]{\nouppercase{\rightmark}} % Custom header text
 \fancyhead[C]{} % Custom header text
-\fancyhead[R]{\myDegreeCourse} % Custom header text
+\fancyhead[R]{} % Custom header text
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\headrule}{\hbox to\headwidth{%
   \color{Gray} \leaders\hrule height \headrulewidth\hfill}} % thickness of lines
